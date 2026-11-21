@@ -26,22 +26,22 @@
  */
 export function calculateGrade(score, hasExtraCredit) {
   if (score < 0 || score > 100) {
-    return "INVALID"
+    return "INVALID";
   }
 
   if (hasExtraCredit && score < 95) {
-    score += 5
+    score += 5;
   }
 
   if (score >= 90 && score <= 100) {
-    return "A"
+    return "A";
   } else if (score >= 80 && score <= 89) {
-    return "B"
+    return "B";
   } else if (score >= 70 && score <= 79) {
-    return "C"
+    return "C";
   } else if (score >= 60 && score <= 69) {
-    return "D"
+    return "D";
   } else {
-    return "F"
+    return "F";
   }
 }

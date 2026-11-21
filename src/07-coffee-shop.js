@@ -46,7 +46,7 @@ export function calculateCoffeePrice(size, type, extras = {}) {
   } else if (size === "medium") {
     totalPrice += 4.00
   } else if (size === "large") {
-    totalPrice += 5.00
+    totalPrice += 5
   }
 
   if (type === "latte") {

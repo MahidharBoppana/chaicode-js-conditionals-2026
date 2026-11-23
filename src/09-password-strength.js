@@ -56,7 +56,7 @@ export function checkPasswordStrength(password) {
     /[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password),
   ];
 
-  const count = conditions.filter(Boolean).length;
+  const count = conditions.filter(check => Boolean(check)).length;
 
 
   if (count <= 1) {

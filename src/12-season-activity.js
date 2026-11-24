@@ -31,5 +31,49 @@
  * @returns {{ season: string, activity: string } | null}
  */
 export function getSeasonActivity(month, temperature) {
-  // Your code here
+  if (month < 1 || month > 12) {
+    return null
+  }
+
+  const seasons = {
+    1: "Winter",
+    2: "Winter",
+    3: "Spring",
+    4: "Spring",
+    5: "Spring",
+    6: "Summer",
+    7: "Summer",
+    8: "Summer",
+    9: "Autumn",
+    10: "Autumn",
+    11: "Autumn",
+    12: "Winter"
+  }
+
+  const season = seasons[month];
+
+  if (season === "Winter") {
+    return {
+      season,
+      activity: temperature < 0 ? "skiing" : "ice skating"
+    }
+  }
+  if (season === "Spring") {
+    return {
+      season,
+      activity: temperature > 20 ? "hiking" : "museum visit"
+    }
+  }
+  if (season === "Summer") {
+    return {
+      season,
+      activity: temperature > 35 ? "swimming" : "cycling"
+    }
+  }
+  if (season === "Autumn") {
+    return {
+      season,
+      activity: temperature > 15 ? "nature walk" : "reading at a cafe"
+    }
+  }
 }
